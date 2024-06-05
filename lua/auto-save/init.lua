@@ -53,6 +53,10 @@ local function debounce(lfn, duration)
     return inner_debounce
 end
 
+function M.get_autosave_state()
+	return autosave_running
+end
+
 function M.save(buf)
     buf = buf or api.nvim_get_current_buf()
 
